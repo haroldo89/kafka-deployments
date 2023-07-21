@@ -1,0 +1,47 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.kafka.App",
+            "projectName": "kafka"
+        },
+        {
+            "name": "operator-port-40000",
+            "type": "go",
+            "request": "attach",
+            "mode": "remote",
+            "remotePath": "${workspaceFolder}",
+            "host": "127.0.0.1",
+            "port": 40000,
+            "trace": "verbose",
+            "env": {
+                "WATCH_NAMESPACE": "default",
+                "KUBERNETES_CONFIG": "/home/acaicedo/.kube/config"
+            }
+        },
+        {
+            "name": "operator-port-40001",
+            "type": "go",
+            "request": "attach",
+            "mode": "remote",
+            "remotePath": "${workspaceFolder}",
+            "host": "127.0.0.1",
+            "port": 40001,
+            "trace": "verbose",
+            "env": {
+                "WATCH_NAMESPACE": "prescaler-operator",
+                "KUBERNETES_CONFIG": "/home/acaicedo/.kube/config"
+            }
+        },
+        {
+            "name": "Current File",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}/${relativeFileDirname}",
+            "showLog": true
+        }
+    ]
+}
