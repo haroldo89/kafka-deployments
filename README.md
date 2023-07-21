@@ -21,6 +21,8 @@ docker-compose up -d
 
 - kubernetes in local environmet (kind, docker, minikube)
 
+Once you have cloned the repo just spin it up!
+
 ```
 cd ./k8s
 
